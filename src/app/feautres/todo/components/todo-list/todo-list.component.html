@@ -1,0 +1,18 @@
+<div id="todo-list"
+  class="container text-dark rounded-bottom-4 border-dark d-flex flex-column row-gap-2 py-4 my-4"
+  style="background-color: #f6f6f6"
+  [class.justify-content-center]="!todos.length"
+>
+  @for (todo of todos; track $index) {
+  <app-todo-item
+    [todo]="todo.todo"
+    [isCompleted]="todo.isCompleted"
+    (remove)="remove.emit($index)"
+    (mark)="mark.emit($index)"
+  />
+  } @empty {
+
+  <p class="h5 text-capitalize text-danger text-center">nothing to show here!!</p>
+
+  }
+</div>

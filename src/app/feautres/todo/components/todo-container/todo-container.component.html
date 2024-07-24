@@ -1,0 +1,6 @@
+<app-todo-form (add)="add($event)" />
+<app-todo-list
+  [todos]="todos"
+  (remove)="remove($event)"
+  (mark)="mark($event)"
+/>

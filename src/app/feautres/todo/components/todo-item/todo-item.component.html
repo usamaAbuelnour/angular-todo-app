@@ -1,0 +1,22 @@
+<div
+  class="container border border-1 border-dark-subtle rounded py-3 d-flex flex-column row-gap-3 flex-md-row align-items-md-center column-gap-4 justify-content-md-between"
+>
+  <p
+    id="text"
+    class="fs-5 overflow-hidden lh-1"
+    [ngClass]="{ 'text-decoration-line-through': isCompleted }"
+  >
+    {{ todo }}
+  </p>
+
+  <div id="button-group" class="btn-group" role="group" aria-label="Basic mixed styles example">
+    <button type="button" class="btn btn-danger" (click)="remove.emit()">
+      <i class="fa-solid fa-trash me-1"></i>
+      Delete
+    </button>
+    <button type="button" class="btn btn-warning" (click)="mark.emit()">
+      <i class="fa-solid fa-check me-1"></i>
+      Completed
+    </button>
+  </div>
+</div>

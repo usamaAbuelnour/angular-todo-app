@@ -1,0 +1,16 @@
+input {
+  &:focus {
+    outline: solid 2px #888;
+  }
+
+  @media(min-width: 768px) {
+    width: 60%;
+  }
+}
+
+button {
+
+  @media(min-width: 768px) {
+    width: 10% !important;
+  }
+}
